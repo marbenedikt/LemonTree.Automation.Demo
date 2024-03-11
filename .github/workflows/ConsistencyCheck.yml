@@ -17,7 +17,7 @@ jobs:
     defaults:
       run:
         shell: pwsh
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
 
       # download Lemontree.Automation on a runner and setup the license
-      - uses: LieberLieber/setup-LemonTree.Automation@v1
+      - uses: LieberLieber/setup-LemonTree.Automation@v5
         id: GetLTA
         with:
           License: ${{secrets.LTALICENSE}} 
